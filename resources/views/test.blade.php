@@ -8,6 +8,7 @@
 <body>
     <h1>TEST</h1>
     <h1>      <?= $variable; ?>      </h1> <!-- la variable la coge desde el segundo argumento #nota5 !-->
+    <!-- <h1>{{ $variable }}</h1> -->
     <h1>{{ $variable }}</h1>
 </body>
 </html>
