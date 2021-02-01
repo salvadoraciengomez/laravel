@@ -57,14 +57,33 @@ class PostsController extends Controller
 
     
     //Using Model to acces database
-    public function show($slug){
+    // public function show($slug){
         
-        $post = Post::where('slug', $slug)->first();
+    //     $post = Post::where('slug', $slug)->first();
 
-        if (!$post) abort(404);
+    //     if (!$post) abort(404);
+
+    //     return view('post',[
+    //         'post' => $post
+    //     ]);
+    // }
+
+    
+    //Using firstOrFail method instead abort
+    // public function show($slug){
+        
+    //     $post = Post::where('slug', $slug)->firstOrFail();
+
+    //     return view('post',[
+    //         'post' => $post
+    //     ]);
+    // }
+
+    public function show($slug){
 
         return view('post',[
-            'post' => $post
+            'post' => Post::where('slug', $slug)->firstOrFail()
         ]);
     }
+
 }
