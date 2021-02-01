@@ -77,9 +77,4 @@ use App\Http\Controllers\PostsController;
 
 //Nota7 Uso de controlador
 
-//Route::get('/posts', 'PostsController@show');
-
-Route::get('/posts', PostsController::class);
-
-//use App\Http\Controllers\UserController;
-//Route::get('/user', [UserController::class, 'index']);
+Route::get('/posts', PostsController::class); //Se debe crear el método __invoke() a modo de constructor
