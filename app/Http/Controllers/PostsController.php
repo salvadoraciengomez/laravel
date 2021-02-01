@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
+
+
 
 class PostsController extends Controller
 {
@@ -40,8 +44,24 @@ class PostsController extends Controller
     //     ]);
     // }
 
+    
+    
+    //Fetching first result from mySQL
+    // public function show($slug){
+    //     $post = \DB::table('posts')->where('slug', $slug)->first();
+
+    //     return view('post',[
+    //         'post' => $post
+    //     ]);
+    // }
+
+    
+    //Using Model to acces database
     public function show($slug){
-        $post = \DB::table('posts')->where('slug', $slug)->first();
+        
+        $post = Post::where('slug', $slug)->first();
+
+        if (!$post) abort(404);
 
         return view('post',[
             'post' => $post
