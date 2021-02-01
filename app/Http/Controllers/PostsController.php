@@ -12,18 +12,17 @@ class PostsController extends Controller
     }
 
     public function show($post){
-        Route::get('posts/{post}', function($post){
+        //Route::get('posts/{post}', function($post){
             $posts = [
                 'my-first-post' => 'Hoola, este es el primer post',
                 'my-second-post' => 'Este es el segundo post'
             ];
 
-            //if(!array_key_exists($post, $posts)) abort(404, 'No definido');
+            if(!array_key_exists($post, $posts)) abort(404, 'No definido');
 
              return view('post',[
                  'post' => $posts[$post]
             ]);
-        } );
 
     }
 }
