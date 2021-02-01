@@ -11,18 +11,30 @@ class PostsController extends Controller
         return 'hola';
     }
 
-    public function show($post){
-        //Route::get('posts/{post}', function($post){
-            $posts = [
-                'my-first-post' => 'Hoola, este es el primer post',
-                'my-second-post' => 'Este es el segundo post'
-            ];
+    // public function show($post){
 
-            if(!array_key_exists($post, $posts)) abort(404, 'No definido');
+    //         $posts = [
+    //             'my-first-post' => 'Hoola, este es el primer post',
+    //             'my-second-post' => 'Este es el segundo post'
+    //         ];
 
-             return view('post',[
-                 'post' => $posts[$post]
-            ]);
+    //         if(!array_key_exists($post, $posts)) abort(404, 'No definido');
 
+    //          return view('post',[
+    //              'post' => $posts[$post]
+    //         ]);
+
+    // }
+
+    public function show($slug){
+        $post = \DB::table('posts')->where('slug', $slug)->first();
+
+        dd($post);
+
+        if(!array_key_exists($post, $posts)) abort(404, 'No definido');
+
+        return view('post',[
+            'post' => $posts[$post]
+        ]);
     }
 }
