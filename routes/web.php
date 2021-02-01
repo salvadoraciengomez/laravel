@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +79,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/posts', 'PostsController@show');
 
-Route::get('/posts', PostsController::class, 'show');
+Route::get('/posts', PostsController::class);
 
 //use App\Http\Controllers\UserController;
 //Route::get('/user', [UserController::class, 'index']);
