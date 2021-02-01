@@ -1,11 +1,10 @@
-<?php 
+<?php
 
-    namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
-    class PostsController{
-        public function show(){
-            return 'Hello from PostsController';
-        }
-    }
+use Illuminate\Http\Request;
 
-?>
+class PostsController extends Controller
+{
+    //
+}
