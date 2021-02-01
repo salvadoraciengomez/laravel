@@ -66,7 +66,7 @@ Route::get('/posts/{post}', function($post){
         'my-second-post' => 'This is the second post'
     ];
 
-        //if(! array_key_exists($post, $posts)) abort(404, 'Sorry don't exist);
+        //if(! array_key_exists($post, $posts)) abort(404, 'Sorry don't exist);   pero se puede usar ?? '404 error' como valor por defecto del array
 
     return view('post', [
         'post' => $posts[$post] ?? 'This is the default value for the unknown key'       //Devuelve desde https://localhost/posts/my-first-post
