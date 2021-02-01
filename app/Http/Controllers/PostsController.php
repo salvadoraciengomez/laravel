@@ -3,7 +3,9 @@
     namespace App\Http\Controllers;
 
     class PostsController{
-        public function show(){};
+        public function show(){
+            return 'Hello from PostsController';
+        }
     }
 
 ?>
