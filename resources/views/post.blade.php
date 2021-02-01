@@ -9,7 +9,7 @@
 <body>
     <h1>BLOG POSTS</h1>
 
-    {{ $post }}
+    {{ $post->body }}
 
 </body>
 </html>

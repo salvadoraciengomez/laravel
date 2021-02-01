@@ -26,15 +26,25 @@ class PostsController extends Controller
 
     // }
 
+
+
+    // public function show($slug){
+    //     $post = \DB::table('posts')->where('slug', $slug)->first();
+
+    //     dd($post);
+
+    //     if(!array_key_exists($post, $posts)) abort(404, 'No definido');
+
+    //     return view('post',[
+    //         'post' => $posts[$post]
+    //     ]);
+    // }
+
     public function show($slug){
         $post = \DB::table('posts')->where('slug', $slug)->first();
 
-        dd($post);
-
-        if(!array_key_exists($post, $posts)) abort(404, 'No definido');
-
         return view('post',[
-            'post' => $posts[$post]
+            'post' => $post
         ]);
     }
 }
