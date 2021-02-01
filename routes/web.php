@@ -76,4 +76,9 @@ use Illuminate\Support\Facades\Route;
 
 //Nota7 Uso de controlador
 
-Route::get('/posts', 'PostsController@show');
+//Route::get('/posts', 'PostsController@show');
+
+Route::get('/posts', PostsController::class, 'show');
+
+//use App\Http\Controllers\UserController;
+//Route::get('/user', [UserController::class, 'index']);
