@@ -59,6 +59,6 @@ use Illuminate\Support\Facades\Route;
 
 //NOTA6 Uso de POST
 
-Route::get('/posts/{post}', function(){
-    return view('post');
+Route::get('/posts/{post}', function($post){
+    return $post;
 });
