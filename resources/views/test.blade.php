@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- References ./app/routes/web.php -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,6 @@
     <h1>TEST</h1>
     <h1>      <?= $variable; ?>      </h1> <!-- la variable la coge desde el segundo argumento #nota5 !-->
     <!-- <h1>{{ $variable }}</h1> -->
-    <h1>{{ $variable }}</h1>
+    <h1>{ !! $variable !! }</h1> <!-- además de hacer el script del GET (nota5) imprime el código { !! $variable !! } -->
 </body>
 </html>
