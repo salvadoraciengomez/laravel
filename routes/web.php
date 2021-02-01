@@ -76,4 +76,4 @@ use Illuminate\Support\Facades\Route;
 
 //Nota7 Uso de controlador
 
-Route::get('/entradas/{entry}', 'EntryController@metodo');
+Route::get('posts', 'PostsController@show');
