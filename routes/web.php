@@ -67,6 +67,6 @@ Route::get('/posts/{post}', function($post){
     ];
 
     return view('post', [
-        'post' => $posts[$post]
+        'post' => $posts[$post] ?? 'This is the default value for the unknown key'       //Devuelve desde https://localhost/posts/my-first-post
     ]);
 });
