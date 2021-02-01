@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 //NOTA2
 //Devuelve el json del array
-Route::get('/', function () {
-    return ['myKey' => 'myValue'];
-});
+//Route::get('/', function () {
+//    return ['myKey' => 'myValue'];
+//});
 
 
 //NOTA3
@@ -51,7 +51,11 @@ Route::get('/', function () {
 //    ]);
 //});
 
+
+
 //./storage/framework/views contiene la vista compilada
+
+
 
 //NOTA6 Uso de POST
 
