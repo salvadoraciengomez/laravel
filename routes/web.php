@@ -60,5 +60,13 @@ use Illuminate\Support\Facades\Route;
 //NOTA6 Uso de POST
 
 Route::get('/posts/{post}', function($post){
-    return $post;
+    
+    $posts=[
+        'my-first-post' => 'This is the first post',
+        'my-second-post' => 'This is the second post'
+    ];
+
+    return view('post', [
+        'post' => $posts[$post]
+    ]);
 });
