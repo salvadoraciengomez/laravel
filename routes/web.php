@@ -72,3 +72,8 @@ Route::get('/posts/{post}', function($post){
         'post' => $posts[$post] ?? 'This is the default value for the unknown key'       //Devuelve desde https://localhost/posts/my-first-post
     ]);
 });
+
+
+//Nota7 Uso de controlador
+
+Rou8te::get('/entradas/{entry}', EntryController@metodo);
