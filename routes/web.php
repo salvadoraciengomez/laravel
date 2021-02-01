@@ -59,21 +59,21 @@ use Illuminate\Support\Facades\Route;
 
 //NOTA6 Uso de POST
 
-Route::get('/posts/{post}', function($post){
+// Route::get('/posts/{post}', function($post){
     
-    $posts=[
-        'my-first-post' => 'This is the first post',
-        'my-second-post' => 'This is the second post'
-    ];
+//     $posts=[
+//         'my-first-post' => 'This is the first post',
+//         'my-second-post' => 'This is the second post'
+//     ];
 
         //if(! array_key_exists($post, $posts)) abort(404, 'Sorry don't exist);   pero se puede usar ?? '404 error' como valor por defecto del array
 
-    return view('post', [
-        'post' => $posts[$post] ?? 'This is the default value for the unknown key'       //Devuelve desde https://localhost/posts/my-first-post
-    ]);
-});
+//     return view('post', [
+//         'post' => $posts[$post] ?? 'This is the default value for the unknown key'       //Devuelve desde https://localhost/posts/my-first-post
+//     ]);
+// });
 
 
 //Nota7 Uso de controlador
 
-Rou8te::get('/entradas/{entry}', EntryController@metodo);
+Route::get('/entradas/{entry}', 'EntryController@metodo');
